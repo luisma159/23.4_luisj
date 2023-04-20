@@ -46,9 +46,10 @@ view: inventory_items {
     ]
     sql: ${TABLE}.sold_at ;;
   }
-
-  measure: count {
-    type: count
-    drill_fields: [id, products.id, products.item_name, order_items.count, order_items_vijaya.count]
-  }
+  measure: total_funnel_entries {
+    hidden: yes
+      label: "Total Funnel Entries"
+      description: "Target funnel entries across business models"
+    type: sum
+    }
 }
