@@ -51,5 +51,6 @@ view: inventory_items {
       label: "Total Funnel Entries"
       description: "Target funnel entries across business models"
     type: sum
+    sql: ${TABLE}.id;;
     }
 }
